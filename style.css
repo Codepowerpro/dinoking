@@ -1,0 +1,93 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap');
+*{
+    margin: 0;
+    padding:0;
+    box-sizing: border-box;
+}
+body{
+    background-color: red;
+    overflow: hidden;
+}
+.gameContainer{
+    background-image: url(bg.png);
+    background-repeat: no-repeat;
+    background-size: 100vw 100vh;
+    width: 100%;
+    height: 100vh;
+}
+
+.dino{
+    background-image: url(boy.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 160px;
+    height: 154px;
+    position: absolute;
+    bottom:0;
+    left: 52px;
+}
+
+.obstacle{
+    width: 166px;
+    height: 113px;
+    background-image: url(dragon.png);
+    background-size: cover;
+    position: absolute;
+    bottom: 0;
+    left: 44vw;
+}
+
+.animateDino{
+    animation: dino 0.6s linear;
+}
+
+.obstacleAni{
+    animation: obstacleAni 5s linear infinite;
+}
+
+.gameOver{
+    display: flex;
+    justify-content: center;
+    position: relative;
+    top:63px;
+    font-size: 30px;
+    margin-left: 5px;
+    text-align: center; 
+    font-family: 'Poppins', sans-serif;
+}
+
+#scoreCont{
+    display: flex;
+    font-size: 25px;
+    color: #fcfcfc;
+    background-color: blueviolet;
+    font-weight: bold;
+    position: absolute;
+    right: 100px;
+    top: 55px;
+    border: 2px solid rgb(0, 0, 0);
+    padding: 5px;
+    font-family: 'Poppins', sans-serif;
+    border-radius: 10px;
+}
+
+@keyframes dino{
+    0%{
+        bottom: 0;
+    }
+    50%{
+        bottom: 422px;
+    }
+    100%{
+        bottom: 0; 
+    }
+}
+
+@keyframes obstacleAni{
+    0%{
+        left: 100vw;
+    }
+    100%{
+        left: -10vw;
+    }
+}
